@@ -1,4 +1,4 @@
-import { Checkbox, Form, Typography } from "antd";
+import { Button, Checkbox, Form, Typography } from "antd";
 import useNotification from "antd/es/notification/useNotification";
 import type { ApplicationRequest, Props } from "./ModalApplicationProps.ts";
 import { ButtonStyled } from "../Buttons/ButtonStyled.ts";
@@ -8,6 +8,7 @@ import {
   ModalApplicationStyled,
 } from "./ModalApplicationStyled.ts";
 import { SubContainer } from "../Pages/MainPageStyle.ts";
+import { useNavigate } from "react-router-dom";
 
 const { Text, Title } = Typography;
 
@@ -27,6 +28,9 @@ const ModalApplication = ({ open, setOpen }: Props) => {
       showProgress: true,
     });
   };
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/privacy-policy`);}
   return (
     <ModalApplicationStyled
       open={open}
@@ -138,14 +142,15 @@ const ModalApplication = ({ open, setOpen }: Props) => {
           ]}>
           <Checkbox style={{ color: "white" }}>
             Я согласен(а) с{" "}
-            <a
-              href="/privacy-policy"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "#1890ff", textDecoration: "underline" }}
+            <Button
+              type={"link"}
+              style={{ boxShadow: "none", border: "none", outline: "none" }}
+              onClick={handleClick}
             >
-              Политикой конфиденциальности
-            </a>
+              <Text underline style={{ color: "white" }}>
+                Политикой конфиденциальности
+              </Text>
+            </Button>
           </Checkbox>
         </ApplicationForm.Item>
       </ApplicationForm>

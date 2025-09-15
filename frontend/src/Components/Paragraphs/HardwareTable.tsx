@@ -7,7 +7,7 @@ const {Text} = Typography;
 
 const HardwareTable = () => {
   return (
-    <ContentContainer style={{ flexDirection: "column", paddingTop: "40px" }} $image={"/images/bg5.jpg"} $gap={"40px"}>
+    <ContentContainer style={{ flexDirection: "column", paddingTop: "40px" }} $image={`${import.meta.env.BASE_URL}/images/bg5.jpg`} $gap={"40px"}>
       <ContactTable
         data={hardwareCard}
         columns={6}
