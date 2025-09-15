@@ -1,16 +1,19 @@
 import { ContentContainer, SubContainer } from "../Pages/MainPageStyle.ts";
 import { Typography } from "antd";
-import FAQItem from "../FAQItem/FAQItem.tsx";
-import { faqItems } from "../FAQItem/FAQItemStyled.ts";
+import FAQItem, { type FAQItemProps } from "../FAQItem/FAQItem.tsx";
 import ButtonForApplication from "../Buttons/ButtonForApplication.tsx";
 import ModalApplicationWithQuestion from "../ModalApplication/ModalApplicationWithQuestion.tsx";
 const { Title } = Typography;
 
-const Questions = () => {
+interface QuestionsProps {
+  data: FAQItemProps[];
+}
+
+const Questions = ({data} : QuestionsProps) => {
   return (
     <ContentContainer
       $justifyContent={"center"}
-      style={{ flexDirection: "column", backgroundColor: "#f0f0f0" }}
+      style={{ flexDirection: "column", backgroundColor: "#f0f0f0", paddingBottom: "30px" }}
     >
       <SubContainer style={{ marginBottom: "40px" }}>
         <Title level={1} style={{ whiteSpace: "pre-line" }}>
@@ -28,7 +31,7 @@ const Questions = () => {
           marginBottom: "40px",
         }}
       >
-        {faqItems.map((item) => (
+        {data.map((item) => (
           <SubContainer>
             <FAQItem
               question={item.question}
@@ -42,6 +45,7 @@ const Questions = () => {
         modalComponent={ModalApplicationWithQuestion}
         buttonText={"Задать вопрос"}
         fontSize={"xlarge"}
+
       />
     </ContentContainer>
   );

@@ -132,7 +132,7 @@ export const navigationCard: NavigationProps[] = [
   },
   {
     id: 3,
-    paragraph: "hardwareSupport",
+    paragraph: "hardware",
     imageSource: "/images/w3.jpg",
     text: "ПОДБЕРЕМ И УСТАНОВИМ\nАППАРАТНОЕ ОБЕСПЕЧЕНИЕ",
   },

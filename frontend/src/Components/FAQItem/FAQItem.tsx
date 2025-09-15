@@ -4,10 +4,10 @@ import { QuestionIcon, SpeechBubble, TailIcon } from "./FAQItemStyled.ts";
 
 const { Title, Text } = Typography;
 
-interface FAQItemProps {
+export interface FAQItemProps {
   question: string;
   answer: string;
-  iconImage: string;
+  iconImage?: string;
 }
 
 const FAQItem = ({ question, answer, iconImage }: FAQItemProps) => {

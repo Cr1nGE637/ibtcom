@@ -7,7 +7,7 @@ import { ButtonStyled } from "./ButtonStyled.ts";
 interface ModalProps {
   modalComponent: React.ComponentType<Props>;
   buttonText: string;
-  fontSize: string;
+  fontSize?: string;
 }
 
 const ButtonForApplication = ({ modalComponent, buttonText, fontSize }: ModalProps) => {

@@ -3,17 +3,15 @@ import type { NavigationProps } from "../Cards/NavigationCard.tsx";
 import { HeaderStyled } from "./HeaderStyled.ts";
 import { createElement, useState } from "react";
 import type { Props } from "../ModalApplication/ModalApplicationProps.ts";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const { Text } = Typography;
 
 const menuItems: { label: string; paragraph: string }[] = [
-  { label: "Главная", paragraph: "banner" },
+  { label: "Главная", paragraph: "" },
   { label: "Телефония", paragraph: "telephony" },
   { label: "Программное обеспечение", paragraph: "software" },
-  { label: "Аппаратное обеспечение", paragraph: "hardwareSupport" },
-  { label: "Партнеры", paragraph: "partnership" },
-  { label: "Вопросы", paragraph: "questions" },
+  { label: "Аппаратное обеспечение", paragraph: "hardware" },
 ];
 
 interface ModalProps {
@@ -23,17 +21,8 @@ const HeaderParagraph = ({ modalComponent }: ModalProps) => {
   const [open, setOpen] = useState<boolean>(false);
   const modal = createElement(modalComponent, { open, setOpen });
   const navigate = useNavigate();
-  const location = useLocation();
   const handleClick = ({ paragraph }: NavigationProps) => {
-    if (location.pathname === "/") {
-      const element = document.getElementById(paragraph);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      navigate(`/#${paragraph}`, { replace: true });
-    }
-  };
+    navigate(`/${paragraph}`);}
   return (
     <HeaderStyled>
       {menuItems.map((item) => (

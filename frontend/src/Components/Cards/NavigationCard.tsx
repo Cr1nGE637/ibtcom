@@ -1,5 +1,6 @@
 import { Card } from "./Card.ts";
 import {Typography} from "antd";
+import { useNavigate } from "react-router-dom";
 
 export interface NavigationProps {
   id?: number;
@@ -15,11 +16,9 @@ const NavigationCard: React.FC<NavigationProps> = ({
   imageSource,
   text,
 }: NavigationProps) => {
+  const navigate = useNavigate();
   const handleClick = () => {
-    const element = document.getElementById(paragraph);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate(`/${paragraph}`);
   };
   return (
     <Card onClick={handleClick} $image={imageSource}>

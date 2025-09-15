@@ -5,18 +5,13 @@ import HeaderParagraph from "../Header/HeaderParagraph.tsx";
 import Banner from "../Paragraphs/Banner.tsx";
 import FooterParagraph from "../Footer/FooterParagraph.tsx";
 import NavigationTable from "../Paragraphs/NavigationTable.tsx";
-import ContactTable from "../Paragraphs/ContactTable.tsx";
-import Telephony from "../Paragraphs/Telephony.tsx";
 import Information from "../Paragraphs/Information.tsx";
-import { softwareCards } from "../Cards/CardLists.ts";
 import Questions from "../Paragraphs/Questions.tsx";
 
 import { ConfigProvider } from "antd";
-import CostReduction from "../Paragraphs/CostReduction.tsx";
-import CostReductionStrategy from "../Paragraphs/CostReductionStrategy.tsx";
 import IBTCOM from "../Paragraphs/IBTCOM.tsx";
-import HardwareTable from "../Paragraphs/HardwareTable.tsx";
 import ModalApplication from "../ModalApplication/ModalApplication.tsx";
+import { faqItemsMain } from "../FAQItem/FAQItemStyled.ts";
 
 const MainPage: React.FC = () => {
   useEffect(() => {
@@ -46,45 +41,22 @@ const MainPage: React.FC = () => {
           <Banner />
         </ParagraphContainer>
 
-        <HeaderParagraph modalComponent={ModalApplication}/>
+        <HeaderParagraph modalComponent={ModalApplication} />
 
         <ParagraphContainer id="main" $height={"576px"}>
           <NavigationTable />
         </ParagraphContainer>
-        <ParagraphContainer id="telephony" $height={"400px"}>
-          <Telephony />
-        </ParagraphContainer>
-        <ParagraphContainer
-          id="costReduction"
-          $height={"400px"}
-          style={{ flexDirection: "column" }}
-        >
-          <CostReduction />
-        </ParagraphContainer>
-        <ParagraphContainer id="costReductionStrategy" $height={"380px"}>
-          <CostReductionStrategy />
-        </ParagraphContainer>
-        <ParagraphContainer id="software" $height={"840px"}>
-          <ContactTable
-            data={softwareCards}
-            columns={5}
-            titleLevel={1}
-            title={"Подберем и оптимизируем ПО"}
-            image={"/images/bg3.jpg"}
-            maxWidth={"1200px"}
-          />
-        </ParagraphContainer>
-        <ParagraphContainer id="ibtcom" $height={"472px"}>
+
+        <ParagraphContainer id="ibtcom" $height={"auto"}>
           <IBTCOM />
         </ParagraphContainer>
-        <ParagraphContainer id="hardwareSupport" $height={"548px"}>
-          <HardwareTable />
-        </ParagraphContainer>
-        <ParagraphContainer id="partnership" $height={"360px"}>
+
+        <ParagraphContainer id="partnership" $height={"auto"} style={{paddingBottom: "80px"}}>
           <Information text={"Наши партнеры"} image={"/images/partners.png"} />
         </ParagraphContainer>
-        <ParagraphContainer id="questions" $height={"970px"}>
-          <Questions></Questions>
+
+        <ParagraphContainer id="questions" $height={"auto"}>
+          <Questions data={faqItemsMain}></Questions>
         </ParagraphContainer>
         <FooterParagraph />
       </MainContainer>
