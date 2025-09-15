@@ -9,7 +9,7 @@ const { Text } = Typography;
 const CostReductionStrategy = () => {
   return (
     <ContentContainer style={{ flexDirection: "column" }}>
-      <Information text={"Как мы сократим затраты"} image={"/images/how.png"} />
+      <Information text={"Как мы сократим затраты"} image={`${import.meta.env.BASE_URL}/images/how.png`} />
       <SubContainer
         $justifyContent={"left"}
         style={{ width: "1000px" }}

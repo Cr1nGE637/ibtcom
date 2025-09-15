@@ -14,7 +14,7 @@ const IBTCOM = () => {
         marginBottom: "20px",
       }}
     >
-      <Information text={"IBTCOM это"} image={"/images/what.png"} />
+      <Information text={"IBTCOM это"} image={`${import.meta.env.BASE_URL}/images/what.png`} />
       <SubContainer
         $justifyContent={"left"}
         style={{ width: "1000px", marginBottom: "40px", marginTop: "20px" }}

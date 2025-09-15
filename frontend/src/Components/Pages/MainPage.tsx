@@ -52,7 +52,7 @@ const MainPage: React.FC = () => {
         </ParagraphContainer>
 
         <ParagraphContainer id="partnership" $height={"auto"} style={{paddingBottom: "80px"}}>
-          <Information text={"Наши партнеры"} image={"/images/partners.png"} />
+          <Information text={"Наши партнеры"} image={`${import.meta.env.BASE_URL}/images/partners.png`} />
         </ParagraphContainer>
 
         <ParagraphContainer id="questions" $height={"auto"}>

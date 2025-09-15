@@ -37,7 +37,7 @@ const PrivacyPolicyPage = () => {
             columns={5}
             titleLevel={1}
             title={"Подберем и оптимизируем ПО"}
-            image={"/images/bg3.jpg"}
+            image={`${import.meta.env.BASE_URL}/images/bg3.jpg`}
             maxWidth={"1200px"}
           />
         </ParagraphContainer>

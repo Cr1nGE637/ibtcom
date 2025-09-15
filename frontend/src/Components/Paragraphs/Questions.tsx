@@ -36,7 +36,7 @@ const Questions = ({data} : QuestionsProps) => {
             <FAQItem
               question={item.question}
               answer={item.answer}
-              iconImage={"/images/q.png"}
+              iconImage={`${import.meta.env.BASE_URL}/images/q.png`}
             />
           </SubContainer>
         ))}

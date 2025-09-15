@@ -13,7 +13,7 @@ const Banner = () => {
     <ContentContainer $justifyContent={"space-evenly"}>
       <SubContainer>
         <img
-          src={"https://www.ibtcom.ru/wp-content/themes/ibtcom/img/logo.png"}
+          src={`${import.meta.env.BASE_URL}/images/logo.png`}
           alt="Banner"
         />
       </SubContainer>

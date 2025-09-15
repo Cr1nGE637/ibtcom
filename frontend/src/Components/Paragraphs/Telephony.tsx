@@ -6,7 +6,7 @@ const { Title } = Typography;
 
 const Telephony = () => {
   return (
-    <ContentContainer $justifyContent={"center"} $image={"/images/bg2.jpg"}>
+    <ContentContainer $justifyContent={"center"} $image={`${import.meta.env.BASE_URL}/images/bg2.jpg`}>
       <SubContainer style={{ flexDirection: "column", marginLeft: "200px" }}>
         <Title
           level={2}

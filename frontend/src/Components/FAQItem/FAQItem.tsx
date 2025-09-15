@@ -26,7 +26,7 @@ const FAQItem = ({ question, answer, iconImage }: FAQItemProps) => {
       </SubContainer>
       <SpeechBubble>
         <Text style={{ color: "#333", fontSize: "14px" }}>{answer}</Text>
-        <TailIcon src={"/images/corner.png"} />
+        <TailIcon src={`${import.meta.env.BASE_URL}/images/corner.png`} />
       </SpeechBubble>
 
     </ContentContainer>

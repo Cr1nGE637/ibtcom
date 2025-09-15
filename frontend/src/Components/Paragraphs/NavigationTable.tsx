@@ -7,7 +7,7 @@ import { navigationCard } from "../Cards/CardLists.ts";
 
 const NavigationTable = () => {
   return (
-    <ContentContainer $gap={"40px"} $justifyContent={"center"} $image={"/images/bg1.jpg"}>
+    <ContentContainer $gap={"40px"} $justifyContent={"center"} $image={`${import.meta.env.BASE_URL}/images/bg1.jpg`}>
 
       {navigationCard.map((item) => (
         <SubContainer key={item.id} style={{height: "100%", width: "300px", alignItems: "center"}}>

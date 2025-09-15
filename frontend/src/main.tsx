@@ -11,13 +11,13 @@ import HardwarePage from "./Components/Pages/HardwarePage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={"/ibtcom"}>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path={"/telephony"} element={<TelephonyPage />} />
         <Route path={"/software"} element={<SoftwarePage />} />
         <Route path={"/hardware"} element={<HardwarePage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path={"/privacy-policy"} element={<PrivacyPolicyPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

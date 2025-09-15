@@ -11,7 +11,7 @@ const CostReduction = () => {
     <ContentContainer style={{ flexDirection: "column", marginTop: "20px", marginBottom: "20px" }}>
       <Information
         text={"Сократим затраты на сотовую связь"}
-        image={"/images/icons.png"}
+        image={`${import.meta.env.BASE_URL}/images/icons.png`}
       />
       <SubContainer
         $justifyContent={"left"}
