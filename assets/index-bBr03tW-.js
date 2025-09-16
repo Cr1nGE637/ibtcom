@@ -850,8 +850,8 @@ ibtcom@ibtcom.ru`}),re.jsx(df,{modalComponent:ff,buttonText:"Заказать з
 Номер`},{id:3,imageSource:"./images/cost.png",text:`Среднее снижение
 затрат 30%`},{id:4,imageSource:"./images/operator.png",text:`Смена оператора и
 тарифа в течении 8
-дней`}],b7=[{id:1,paragraph:"telephony",imageSource:"./src/assets/telephony.svg",text:`СОКРАТИМ ЗАТРАТЫ
-НА СОТОВУЮ СВЯЗЬ`},{id:2,paragraph:"software",imageSource:"./src/assets/software.svg",text:"ПОДБЕРЕМ И ОПТИМИЗИРУЕМ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ"},{id:3,paragraph:"hardware",imageSource:"./src/assets/hardware.svg",text:`ПОДБЕРЕМ И УСТАНОВИМ
+дней`}],b7=[{id:1,paragraph:"telephony",imageSource:"./images/telephony.svg",text:`СОКРАТИМ ЗАТРАТЫ
+НА СОТОВУЮ СВЯЗЬ`},{id:2,paragraph:"software",imageSource:"./images/software.svg",text:"ПОДБЕРЕМ И ОПТИМИЗИРУЕМ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ"},{id:3,paragraph:"hardware",imageSource:"./images/hardware.svg",text:`ПОДБЕРЕМ И УСТАНОВИМ
 АППАРАТНОЕ ОБЕСПЕЧЕНИЕ`}],y7=fn(qa)`
   @media (max-width: 768px) {
     flex-direction: column;
@@ -881,7 +881,7 @@ ibtcom@ibtcom.ru`}),re.jsx(df,{modalComponent:ff,buttonText:"Заказать з
   }
 `,S7=()=>re.jsx(y7,{$gap:"40px",$justifyContent:"center",children:b7.map(e=>re.jsx(x7,{children:re.jsx(d7,{id:e.id,paragraph:e.paragraph,imageSource:e.imageSource,text:e.text})},e.id))}),{Text:C7,Title:$7}=ur,w7=()=>re.jsxs(qa,{style:{marginTop:"20px",marginBottom:"20px",width:"100%"},children:[re.jsxs(sr,{style:{flexDirection:"column",width:"50%",minWidth:"300px"},children:[re.jsx($7,{level:1,style:{whiteSpace:"pre-line",textAlign:"center",fontSize:"clamp(24px, 4vw, 48px)"},children:`IBTCOM
 Компания Инновационных
-Бизнес Технологий`}),re.jsx(C7,{style:{whiteSpace:"pre-line",textAlign:"center",fontSize:"clamp(16px, 2.5vw, 28px)"},children:"Поможем вашему бизнесу оптимизировать и сократить затраты"})]}),re.jsx(sr,{style:{width:"50%",minWidth:"300px",justifyContent:"center",alignItems:"center"},children:re.jsx("img",{src:"./src/assets/ibtcom.svg",alt:"Picture",style:{maxWidth:"100%",height:"auto"}})})]}),{Title:E7}=ur,O7=fn(E7)`
+Бизнес Технологий`}),re.jsx(C7,{style:{whiteSpace:"pre-line",textAlign:"center",fontSize:"clamp(16px, 2.5vw, 28px)"},children:"Поможем вашему бизнесу оптимизировать и сократить затраты"})]}),re.jsx(sr,{style:{width:"50%",minWidth:"300px",justifyContent:"center",alignItems:"center"},children:re.jsx("img",{src:"./images/ibtcom.svg",alt:"Picture",style:{maxWidth:"100%",height:"auto"}})})]}),{Title:E7}=ur,O7=fn(E7)`
   margin-top: 8px !important;
   text-align: center;
   font-size: clamp(18px, 2vw, 24px) !important;
@@ -919,7 +919,7 @@ ibtcom@ibtcom.ru`}),re.jsx(df,{modalComponent:ff,buttonText:"Заказать з
 Email ibtcom@ibtcom.ru`})]})]}),D7=()=>re.jsx(Qr,{theme:{token:{fontFamily:'Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',fontWeightStrong:800,fontSize:14}},children:re.jsxs(kc,{children:[re.jsx(eu,{}),re.jsx(Wr,{$height:"auto",children:re.jsx(P7,{})}),re.jsx(tu,{})]})}),{Title:B7,Text:L7}=ur,H7=()=>re.jsxs(qa,{$justifyContent:"center",children:[re.jsxs(sr,{style:{flexDirection:"column",width:"50%",minWidth:"300px"},children:[re.jsx(B7,{level:1,style:{whiteSpace:"pre-line",textAlign:"center",fontSize:"clamp(24px, 4vw, 48px)"},children:`Хотите сократить до 30%
 затрат на сотовую связь?`}),re.jsx(L7,{style:{whiteSpace:"pre-line",textAlign:"center",fontSize:"clamp(16px, 2.5vw, 28px)",marginBottom:"20px"},children:`Подключим вашу организацию
 к специальным корпоративным тарифам
-БЕСПЛАТНО!`}),re.jsx(df,{modalComponent:ff,buttonText:"Оставить заявку",fontSize:"xxlarge"})]}),re.jsx(sr,{style:{width:"50%",minWidth:"300px",justifyContent:"center",alignItems:"center"},children:re.jsx("img",{src:"./src/assets/telephony.svg",alt:"Picture",style:{maxWidth:"100%",height:"auto"}})})]}),{Title:F7}=ur,V7=fn.div`
+БЕСПЛАТНО!`}),re.jsx(df,{modalComponent:ff,buttonText:"Оставить заявку",fontSize:"xxlarge"})]}),re.jsx(sr,{style:{width:"50%",minWidth:"300px",justifyContent:"center",alignItems:"center"},children:re.jsx("img",{src:"./images/telephony.svg",alt:"Picture",style:{maxWidth:"100%",height:"auto"}})})]}),{Title:F7}=ur,V7=fn.div`
   min-width: 65%;
   max-width: 100%;
   display: grid;
