@@ -25,25 +25,25 @@ interface PartnershipProps {
 
 const partners: PartnershipProps[] = [
   {
-    imageSource: "/images/partners1.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners1.png`,
   },
   {
-    imageSource: "/images/partners2.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners2.png`,
   },
   {
-    imageSource: "/images/partners3.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners3.png`,
   },
   {
-    imageSource: "/images/partners4.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners4.png`,
   },
   {
-    imageSource: "/images/partners5.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners5.png`,
   },
   {
-    imageSource: "/images/partners6.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners6.png`,
   },
   {
-    imageSource: "/images/partners7.png",
+    imageSource: `${import.meta.env.BASE_URL}images/partners7.png`,
   },
 ];
 

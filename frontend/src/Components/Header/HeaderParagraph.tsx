@@ -33,7 +33,7 @@ const HeaderParagraph = () => {
     <>
       <HeaderStyled>
         <SubContainer>
-          <img src={`/images/logo.png`} alt="Banner" />
+          <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Banner" />
         </SubContainer>
         
         {/* Десктопное меню */}

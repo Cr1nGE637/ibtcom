@@ -44,7 +44,7 @@ const IBTCOM = () => {
         alignItems: "center"
       }}>
         <img 
-          src={"src/assets/ibtcom.svg"} 
+          src={`${import.meta.env.BASE_URL}src/assets/ibtcom.svg`}
           alt={"Picture"}
           style={{
             maxWidth: "100%",

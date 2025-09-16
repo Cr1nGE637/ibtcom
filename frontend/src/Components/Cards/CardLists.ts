@@ -120,28 +120,28 @@ export const hardwareCard: CardProps[] = [
 export const costReductionStrategyCard: CardProps[] = [
   {
     id: 1,
-    imageSource: `/images/phone.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/phone.png`,
     text: "Позвоните нам по номеру\n" + "+7 (3822) 97-79-97",
   },
   {
     id: 2,
-    imageSource: `/images/analysis.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/analysis.png`,
     text:
       "Проанализируем\n" + "затраты и подберем\n" + "оптимальный тариф",
   },
   {
     id: 3,
-    imageSource: `/images/documents.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/documents.png`,
     text: "Оформим пакет\n" + "документов",
   },
   {
     id: 4,
-    imageSource: `images/operator.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/operator.png`,
     text: "Перевод на новый\n" + "тариф в течение\n" + "8 дней",
   },
   {
     id: 5,
-    imageSource: `/images/cost.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/cost.png`,
     text:
       "Вы экономите до 30%\n" + "благодаря подключению\n" + "к новому тарифу",
   },
@@ -150,22 +150,22 @@ export const costReductionStrategyCard: CardProps[] = [
 export const costReductionCard: CardProps[] = [
   {
     id: 1,
-    imageSource: `/images/special.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/special.png`,
     text: "Доступ к\nспециальным\nтарифам",
   },
   {
     id: 2,
-    imageSource: `/images/number.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/number.png`,
     text: "Не нужно менять\nНомер",
   },
   {
     id: 3,
-    imageSource: `/images/cost.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/cost.png`,
     text: "Среднее снижение\nзатрат 30%",
   },
   {
     id: 4,
-    imageSource: `/images/operator.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/operator.png`,
     text: "Смена оператора и\nтарифа в течении 8\nдней",
   },
 ];
@@ -174,19 +174,19 @@ export const navigationCard: NavigationProps[] = [
   {
     id: 1,
     paragraph: "telephony",
-    imageSource: `src/assets/telephony.svg`,
+    imageSource: `${import.meta.env.BASE_URL}src/assets/telephony.svg`,
     text: "СОКРАТИМ ЗАТРАТЫ\nНА СОТОВУЮ СВЯЗЬ",
   },
   {
     id: 2,
     paragraph: "software",
-    imageSource: `src/assets/software.svg`,
+    imageSource: `${import.meta.env.BASE_URL}src/assets/software.svg`,
     text: "ПОДБЕРЕМ И ОПТИМИЗИРУЕМ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ",
   },
   {
     id: 3,
     paragraph: "hardware",
-    imageSource: `src/assets/hardware.svg`,
+    imageSource: `${import.meta.env.BASE_URL}src/assets/hardware.svg`,
     text: "ПОДБЕРЕМ И УСТАНОВИМ\nАППАРАТНОЕ ОБЕСПЕЧЕНИЕ",
   },
 ];
