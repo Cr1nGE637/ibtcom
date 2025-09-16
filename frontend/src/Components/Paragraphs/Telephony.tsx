@@ -47,7 +47,7 @@ const Telephony = () => {
         alignItems: "center"
       }}>
         <img 
-          src={`${import.meta.env.BASE_URL}src/assets/telephony.svg`}
+          src={`${import.meta.env.BASE_URL}images/telephony.svg`}
           alt={"Picture"}
           style={{
             maxWidth: "100%",

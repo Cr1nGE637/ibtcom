@@ -174,19 +174,19 @@ export const navigationCard: NavigationProps[] = [
   {
     id: 1,
     paragraph: "telephony",
-    imageSource: `${import.meta.env.BASE_URL}src/assets/telephony.svg`,
+    imageSource: `${import.meta.env.BASE_URL}images/telephony.svg`,
     text: "СОКРАТИМ ЗАТРАТЫ\nНА СОТОВУЮ СВЯЗЬ",
   },
   {
     id: 2,
     paragraph: "software",
-    imageSource: `${import.meta.env.BASE_URL}src/assets/software.svg`,
+    imageSource: `${import.meta.env.BASE_URL}images/software.svg`,
     text: "ПОДБЕРЕМ И ОПТИМИЗИРУЕМ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ",
   },
   {
     id: 3,
     paragraph: "hardware",
-    imageSource: `${import.meta.env.BASE_URL}src/assets/hardware.svg`,
+    imageSource: `${import.meta.env.BASE_URL}images/hardware.svg`,
     text: "ПОДБЕРЕМ И УСТАНОВИМ\nАППАРАТНОЕ ОБЕСПЕЧЕНИЕ",
   },
 ];
