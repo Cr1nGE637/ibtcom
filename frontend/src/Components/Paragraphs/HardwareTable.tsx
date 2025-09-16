@@ -7,7 +7,7 @@ const {Text} = Typography;
 
 const HardwareTable = () => {
   return (
-    <ContentContainer style={{ flexDirection: "column", paddingTop: "40px" }} $image={`${import.meta.env.BASE_URL}/images/bg5.jpg`} $gap={"40px"}>
+    <ContentContainer style={{ flexDirection: "column", paddingTop: "40px" }} $gap={"40px"}>
       <ContactTable
         data={hardwareCard}
         columns={6}
@@ -18,15 +18,20 @@ const HardwareTable = () => {
       />
       <SubContainer
         $justifyContent={"center"}
-        style={{ width: "1300px", marginBottom: "40px" }}
+        style={{ 
+          width: "100%", 
+          maxWidth: "1300px",
+          marginBottom: "40px",
+          padding: "0 20px"
+        }}
       >
         <Text
           strong
           style={{
-            fontSize: 20,
+            fontSize: "clamp(16px, 2vw, 20px)",
             whiteSpace: "pre-line",
             textAlign: "center",
-            marginLeft: "80px",
+            lineHeight: 1.5
           }}
         >
           {"Компания предоставляет бесплатные консалтинговые услуги при выборе аппаратного обеспечения\n" +

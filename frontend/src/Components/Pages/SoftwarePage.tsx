@@ -1,15 +1,14 @@
 import { MainContainer, ParagraphContainer } from "./MainPageStyle.ts";
-import Banner from "../Paragraphs/Banner.tsx";
+
 import HeaderParagraph from "../Header/HeaderParagraph.tsx";
-import ModalApplication from "../ModalApplication/ModalApplication.tsx";
+
 import FooterParagraph from "../Footer/FooterParagraph.tsx";
 import { ConfigProvider } from "antd";
 import ContactTable from "../Paragraphs/ContactTable.tsx";
 import { softwareCards } from "../Cards/CardLists.ts";
-import Questions from "../Paragraphs/Questions.tsx";
-import {
-  faqItemsSoftware,
-} from "../FAQItem/FAQItemStyled.ts";
+import FAQItem from "../FAQItem/FAQItem.tsx";
+import { faqItemsSoftware } from "../FAQItem/FAQItemStyled.ts";
+
 
 const PrivacyPolicyPage = () => {
   return (
@@ -18,18 +17,15 @@ const PrivacyPolicyPage = () => {
         token: {
           fontFamily:
             'Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-          fontWeightStrong: 600,
+          fontWeightStrong: 800,
           fontSize: 14,
         },
       }}
     >
       <MainContainer>
 
-        <ParagraphContainer id="banner" $height={"98px"}>
-          <Banner />
-        </ParagraphContainer>
 
-        <HeaderParagraph modalComponent={ModalApplication} />
+        <HeaderParagraph />
 
         <ParagraphContainer id="software" $height={"840px"}>
           <ContactTable
@@ -43,7 +39,7 @@ const PrivacyPolicyPage = () => {
         </ParagraphContainer>
 
         <ParagraphContainer id="questions" $height={"auto"}>
-          <Questions data={faqItemsSoftware}></Questions>
+          <FAQItem items={faqItemsSoftware} title={"Вопросы по программному обеспечению"}/>
         </ParagraphContainer>
 
 

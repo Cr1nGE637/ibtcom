@@ -1,5 +1,5 @@
-import { Card } from "./Card.ts";
-import {Typography} from "antd";
+import { NavigationCardStyled } from "./NavigationCardStyled.ts";
+import { Typography } from "antd";
 import { useNavigate } from "react-router-dom";
 
 export interface NavigationProps {
@@ -9,7 +9,7 @@ export interface NavigationProps {
   text?: string;
 }
 
-const {Title} = Typography;
+const { Title } = Typography;
 
 const NavigationCard: React.FC<NavigationProps> = ({
   paragraph,
@@ -21,9 +21,14 @@ const NavigationCard: React.FC<NavigationProps> = ({
     navigate(`/${paragraph}`);
   };
   return (
-    <Card onClick={handleClick} $image={imageSource}>
-      <Title level={5} style={{whiteSpace: "pre-line", marginTop: "100px", marginLeft: "30px", color: "#fff"}}>{text}</Title>
-    </Card>
+    <NavigationCardStyled
+      hoverable
+      onClick={handleClick}
+      $image={imageSource}
+      style={{ textAlign: "center", alignItems: "flex-end" }}
+    >
+      <Title level={5}>{text}</Title>
+    </NavigationCardStyled>
   );
 };
 

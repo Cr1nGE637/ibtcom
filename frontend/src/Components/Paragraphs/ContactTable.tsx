@@ -1,7 +1,30 @@
 import { ContentContainer, SubContainer } from "../Pages/MainPageStyle.ts";
 import ContactCard from "../Cards/ContactCard.tsx";
 import { Typography } from "antd";
+import styled from "styled-components";
 const { Title } = Typography;
+
+const GridContainer = styled.div<{ $columns: number }>`
+  min-width: 65%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(${props => props.$columns}, 1fr);
+  gap: 5px;
+  
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(${props => Math.min(props.$columns, 4)}, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(${props => Math.min(props.$columns, 2)}, 1fr);
+    gap: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+`;
 
 interface CardItem {
   id?: number;
@@ -33,19 +56,18 @@ const ContactTable = ({
       $image={image}
     >
       <SubContainer style={{ marginBottom: "40px" }}>
-        <Title level={titleLevel} style={{ whiteSpace: "pre-line" }}>
+        <Title 
+          level={titleLevel} 
+          style={{ 
+            whiteSpace: "pre-line",
+            textAlign: "center",
+            fontSize: "clamp(18px, 2.5vw, 32px)"
+          }}
+        >
           {title}
         </Title>
       </SubContainer>
-      <ContentContainer
-        style={{
-          minWidth: "65%",
-          maxWidth: maxWidth,
-          display: "grid",
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,
-          gap: "5px",
-        }}
-      >
+      <GridContainer $columns={columns || 1} style={{ maxWidth }}>
         {data.map((item) => (
           <SubContainer key={item.id}>
             <ContactCard
@@ -55,7 +77,7 @@ const ContactTable = ({
             />
           </SubContainer>
         ))}
-      </ContentContainer>
+      </GridContainer>
     </ContentContainer>
   );
 };

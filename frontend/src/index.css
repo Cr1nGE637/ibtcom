@@ -1,10 +1,124 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+* {
+    box-sizing: border-box;
+}
+
 img{
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+}
 
+/* Адаптивные шрифты */
+h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+p, span, div {
+    word-wrap: break-word;
+}
+
+/* Улучшенная прокрутка */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a4cf5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4042e2;
+}
+
+/* Адаптивные медиа-запросы для общих элементов */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    /* Улучшенная прокрутка на мобильных */
+    * {
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Предотвращение зума при фокусе на input */
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+    
+    /* Компактные отступы для маленьких экранов */
+    .ant-card {
+        margin-bottom: 10px !important;
+    }
+    
+    /* Улучшенные кнопки для touch */
+    .ant-btn {
+        min-height: 44px !important;
+        touch-action: manipulation;
+    }
+}
+
+/* Дополнительные мобильные оптимизации */
+@media (max-width: 768px) {
+    /* Улучшенная читаемость */
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3;
+        margin-bottom: 0.5em;
+    }
+    
+    /* Адаптивные отступы */
+    .ant-typography {
+        margin-bottom: 0.5em !important;
+    }
+    
+    /* Улучшенные модальные окна */
+    .ant-modal {
+        margin: 10px !important;
+        max-width: calc(100vw - 20px) !important;
+    }
+    
+    /* Адаптивные таблицы */
+    .ant-table {
+        font-size: 12px;
+    }
+    
+    /* Улучшенные формы */
+    .ant-form-item {
+        margin-bottom: 16px !important;
+    }
+}
+
+/* Touch-friendly элементы */
+@media (hover: none) and (pointer: coarse) {
+    /* Увеличиваем области клика для touch устройств */
+    .ant-btn, button, a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Убираем hover эффекты на touch устройствах */
+    .ant-card:hover {
+        transform: none !important;
+    }
 }

@@ -36,11 +36,11 @@ const ModalApplication = ({ open, setOpen }: Props) => {
       open={open}
       title={
         <SubContainer style={{ flexDirection: "column" }}>
-          <Title level={1} style={{ color: "white" }}>
+          <Title level={1} style={{ color: "#4a4cf5" }}>
             {"Оставить заявку"}
           </Title>
           <Text
-            style={{ whiteSpace: "pre-line", fontSize: "18px", color: "white" }}
+            style={{ whiteSpace: "pre-line", fontSize: "18px", color: "#4a4cf5" }}
           >
             {"И наши менеджеры свяжутся с вами в ближайшее время"}
           </Text>
@@ -68,7 +68,7 @@ const ModalApplication = ({ open, setOpen }: Props) => {
               style={{
                 whiteSpace: "pre-line",
                 fontSize: "18px",
-                color: "white",
+                color: "#4a4cf5"
               }}
             >
               {"Имя"}
@@ -94,7 +94,7 @@ const ModalApplication = ({ open, setOpen }: Props) => {
               style={{
                 whiteSpace: "pre-line",
                 fontSize: "18px",
-                color: "white",
+                color: "#4a4cf5"
               }}
             >
               {"Телефон"}
@@ -120,7 +120,7 @@ const ModalApplication = ({ open, setOpen }: Props) => {
               style={{
                 whiteSpace: "pre-line",
                 fontSize: "18px",
-                color: "white",
+                color: "#4a4cf5"
               }}
             >
               {"E-Mail"}
@@ -140,14 +140,14 @@ const ModalApplication = ({ open, setOpen }: Props) => {
                   : Promise.reject(new Error("Необходимо согласие с политикой конфиденциальности")),
             },
           ]}>
-          <Checkbox style={{ color: "white" }}>
+          <Checkbox style={{ color: "#4a4cf5"  }}>
             Я согласен(а) с{" "}
             <Button
               type={"link"}
               style={{ boxShadow: "none", border: "none", outline: "none" }}
               onClick={handleClick}
             >
-              <Text underline style={{ color: "white" }}>
+              <Text underline style={{ color: "#4a4cf5"  }}>
                 Политикой конфиденциальности
               </Text>
             </Button>

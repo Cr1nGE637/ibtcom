@@ -2,35 +2,57 @@ import { ContentContainer, SubContainer } from "../Pages/MainPageStyle.ts";
 import { Typography } from "antd";
 import ButtonForApplication from "../Buttons/ButtonForApplication.tsx";
 import ModalApplication from "../ModalApplication/ModalApplication.tsx";
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const Telephony = () => {
   return (
-    <ContentContainer $justifyContent={"center"} $image={`${import.meta.env.BASE_URL}/images/bg2.jpg`}>
-      <SubContainer style={{ flexDirection: "column", marginLeft: "200px" }}>
+    <ContentContainer $justifyContent={"center"}>
+      <SubContainer style={{ 
+        flexDirection: "column", 
+        width: "50%",
+        minWidth: "300px"
+      }}>
         <Title
-          level={2}
-          style={{ whiteSpace: "pre-line", color: "#fff", textAlign: "center" }}
+          level={1}
+          style={{ 
+            whiteSpace: "pre-line", 
+            textAlign: "center",
+            fontSize: "clamp(24px, 4vw, 48px)"
+          }}
         >
           {"Хотите сократить до 30%\nзатрат на сотовую связь?"}
         </Title>
-        <Title
-          level={4}
+        <Text
           style={{
             whiteSpace: "pre-line",
             textAlign: "center",
-            marginTop: "0px",
-            color: "#fff",
+            fontSize: "clamp(16px, 2.5vw, 28px)",
+            marginBottom: "20px",
           }}
         >
           {"Подключим вашу организацию\n" +
             "к специальным корпоративным тарифам\n" +
             "БЕСПЛАТНО!"}
-        </Title>
+        </Text>
         <ButtonForApplication
           modalComponent={ModalApplication}
           buttonText={"Оставить заявку"}
           fontSize={"xxlarge"}
+        />
+      </SubContainer>
+      <SubContainer style={{
+        width:'50%',
+        minWidth: "300px",
+        justifyContent: "center",
+        alignItems: "center"
+      }}>
+        <img 
+          src={"src/assets/telephony.svg"} 
+          alt={"Picture"}
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }}
         />
       </SubContainer>
     </ContentContainer>

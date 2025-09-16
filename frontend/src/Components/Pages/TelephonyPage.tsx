@@ -1,14 +1,15 @@
 import { MainContainer, ParagraphContainer } from "./MainPageStyle.ts";
-import Banner from "../Paragraphs/Banner.tsx";
+
 import HeaderParagraph from "../Header/HeaderParagraph.tsx";
-import ModalApplication from "../ModalApplication/ModalApplication.tsx";
+
 import FooterParagraph from "../Footer/FooterParagraph.tsx";
 import { ConfigProvider } from "antd";
 import Telephony from "../Paragraphs/Telephony.tsx";
 import CostReduction from "../Paragraphs/CostReduction.tsx";
 import CostReductionStrategy from "../Paragraphs/CostReductionStrategy.tsx";
-import Questions from "../Paragraphs/Questions.tsx";
+import FAQItem from "../FAQItem/FAQItem.tsx";
 import { faqItemsTelephony } from "../FAQItem/FAQItemStyled.ts";
+
 
 const TelephonyPage = () => {
   return (
@@ -17,19 +18,16 @@ const TelephonyPage = () => {
         token: {
           fontFamily:
             'Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-          fontWeightStrong: 600,
+          fontWeightStrong: 800,
           fontSize: 14,
         },
       }}
     >
       <MainContainer>
-        <ParagraphContainer id="banner" $height={"98px"}>
-          <Banner />
-        </ParagraphContainer>
 
-        <HeaderParagraph modalComponent={ModalApplication} />
+        <HeaderParagraph/>
 
-        <ParagraphContainer id="telephony" $height={"400px"}>
+        <ParagraphContainer id="telephony" $height={"auto"}>
           <Telephony />
         </ParagraphContainer>
         <ParagraphContainer
@@ -43,7 +41,7 @@ const TelephonyPage = () => {
           <CostReductionStrategy />
         </ParagraphContainer>
         <ParagraphContainer id="questions" $height={"auto"}>
-          <Questions data={faqItemsTelephony}></Questions>
+          <FAQItem items={faqItemsTelephony} title={"Вопросы по телефонии"}/>
         </ParagraphContainer>
         <FooterParagraph />
       </MainContainer>

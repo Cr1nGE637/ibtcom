@@ -6,32 +6,39 @@ export const ButtonStyled = styled(Button)<{ $size?: string }>`
   font-size: ${(props) => {
     switch (props.$size) {
       case "large":
-        return "18px";
+        return "clamp(14px, 2vw, 18px)";
       case "xlarge":
-        return "26px";
+        return "clamp(20px, 3vw, 26px)";
       case "xxlarge":
-        return "35px";
+        return "clamp(24px, 4vw, 35px)";
       default:
-        return "16px";
+        return "clamp(12px, 1.5vw, 16px)";
     }
   }} !important;
 
   padding: ${(props) => {
     switch (props.$size) {
       case "large":
-        return "16px 32px";
+        return "clamp(12px, 2vw, 16px) clamp(16px, 2.5vw, 20px)";
       case "xlarge":
-        return "25px 40px";   /* 👈 под 26px шрифт */
+        return "clamp(18px, 3vw, 25px) clamp(30px, 4vw, 40px)";
       case "xxlarge":
-        return "30px 40px";   /* 👈 под 40px шрифт */
+        return "clamp(20px, 3.5vw, 30px) clamp(30px, 4vw, 40px)";
       default:
-        return "11px 22px"; // medium / default
+        return "clamp(8px, 1.5vw, 11px) clamp(16px, 2.5vw, 22px)";
     }
   }} !important;
-  background-color: #fd5e02;
-  border-bottom: 2px solid #ab4509;
+  background-color: #4a4cf5;
+  border-bottom: 2px solid  #4042e2;
+  white-space: nowrap;
+  
+  @media (max-width: 768px) {
+    white-space: normal;
+    text-align: center;
+  }
+  
   &:hover {
-    background-color: #ff7922 !important;
+    background-color: #91b3fa !important;
   }
   &:focus,
   &:focus-visible {

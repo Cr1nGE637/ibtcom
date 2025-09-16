@@ -1,14 +1,12 @@
 import {MainContainer, ParagraphContainer} from "./MainPageStyle.ts";
-import Banner from "../Paragraphs/Banner.tsx";
+
 import HeaderParagraph from "../Header/HeaderParagraph.tsx";
-import ModalApplication from "../ModalApplication/ModalApplication.tsx";
+
 import FooterParagraph from "../Footer/FooterParagraph.tsx";
 import { ConfigProvider } from "antd";
 import HardwareTable from "../Paragraphs/HardwareTable.tsx";
-import Questions from "../Paragraphs/Questions.tsx";
-import {
-  faqItemsHardware,
-} from "../FAQItem/FAQItemStyled.ts";
+import FAQItem from "../FAQItem/FAQItem.tsx";
+import { faqItemsHardware } from "../FAQItem/FAQItemStyled.ts";
 
 
 const PrivacyPolicyPage = () => {
@@ -18,23 +16,21 @@ const PrivacyPolicyPage = () => {
         token: {
           fontFamily:
             'Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-          fontWeightStrong: 600,
+          fontWeightStrong: 800,
           fontSize: 14,
         },
       }}
     >
       <MainContainer>
-        <ParagraphContainer id="banner" $height={"98px"}>
-          <Banner />
-        </ParagraphContainer>
 
-        <HeaderParagraph modalComponent={ModalApplication} />
+
+        <HeaderParagraph />
 
         <ParagraphContainer id="hardwareSupport" $height={"548px"}>
           <HardwareTable />
         </ParagraphContainer>
         <ParagraphContainer id="questions" $height={"auto"}>
-          <Questions data={faqItemsHardware}></Questions>
+          <FAQItem items={faqItemsHardware} title={"Вопросы по аппаратному обеспечению"}/>
         </ParagraphContainer>
         <FooterParagraph />
       </MainContainer>

@@ -1,34 +1,46 @@
-import { Typography } from "antd";
+// FAQItem.tsx
+import { Collapse, Typography } from "antd";
 import { ContentContainer, SubContainer } from "../Pages/MainPageStyle.ts";
-import { QuestionIcon, SpeechBubble, TailIcon } from "./FAQItemStyled.ts";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
+const { Panel } = Collapse;
 
 export interface FAQItemProps {
   question: string;
   answer: string;
-  iconImage?: string;
 }
 
-const FAQItem = ({ question, answer, iconImage }: FAQItemProps) => {
+interface FAQListProps {
+  items: FAQItemProps[];
+  title?: string;
+}
+
+const FAQItem: React.FC<FAQListProps> = ({ items, title } : FAQListProps) => {
   return (
     <ContentContainer
-      style={{ alignItems: "start", flexDirection: "column", width: "400px" }}
+      style={{ alignItems: "start", flexDirection: "column", width: "100%", marginBottom: 30, marginTop: 30 }}
     >
-      <SubContainer style={{ display: "flex", gap: "8px" }}>
-        <QuestionIcon src={iconImage} />
-        <Title
-          level={4}
-          style={{ margin: 0, color: "#197dbe", fontSize: "16px" }}
-        >
-          {question}
-        </Title>
+      <SubContainer style={{ marginBottom: 20, justifyContent: "center", textAlign: "center", width: "100%" }}>
+        <Title level={2} style={{textAlign: "center"}}>{title}</Title>
       </SubContainer>
-      <SpeechBubble>
-        <Text style={{ color: "#333", fontSize: "14px" }}>{answer}</Text>
-        <TailIcon src={`${import.meta.env.BASE_URL}/images/corner.png`} />
-      </SpeechBubble>
 
+      <Collapse
+        size={"large"}
+        accordion
+        bordered={true}
+        expandIconPosition="end"
+        style={{ width: "100%", backgroundColor: "transparent" }}
+      >
+        {items.map((item, index) => (
+          <Panel
+            header={<strong>{item.question}</strong>}
+            key={index.toString()}
+            style={{ fontSize: "16px" }}
+          >
+            <p style={{ margin: 0, lineHeight: 1.6 }}>{item.answer}</p>
+          </Panel>
+        ))}
+      </Collapse>
     </ContentContainer>
   );
 };

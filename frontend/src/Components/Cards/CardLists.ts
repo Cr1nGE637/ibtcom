@@ -4,7 +4,7 @@ import { type CardProps } from "./ContactCard.tsx";
 export const softwareCards: CardProps[] = [
   {
     id: 1,
-    imageSource: `${import.meta.env.BASE_URL}images/p1.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/a1.png`,
     text: "Консалтинговые услуги",
   },
   {
@@ -19,13 +19,13 @@ export const softwareCards: CardProps[] = [
   },
   {
     id: 4,
-    imageSource: `${import.meta.env.BASE_URL}images/p4.png`,
+    imageSource: `${import.meta.env.BASE_URL}images/a2.png`,
     text: "Ведение перечня существующего ПО",
   },
   {
     id: 5,
     imageSource: `${import.meta.env.BASE_URL}images/p5.png`,
-    text: "Организация системы управления программы обеспечением (SAM)",
+    text: "Организация управления программным обеспечением (SAM)",
   },
   {
     id: 6,
@@ -117,23 +117,76 @@ export const hardwareCard: CardProps[] = [
   },
 ];
 
+export const costReductionStrategyCard: CardProps[] = [
+  {
+    id: 1,
+    imageSource: `/images/phone.png`,
+    text: "Позвоните нам по номеру\n" + "+7 (3822) 97-79-97",
+  },
+  {
+    id: 2,
+    imageSource: `/images/analysis.png`,
+    text:
+      "Проанализируем\n" + "затраты и подберем\n" + "оптимальный тариф",
+  },
+  {
+    id: 3,
+    imageSource: `/images/documents.png`,
+    text: "Оформим пакет\n" + "документов",
+  },
+  {
+    id: 4,
+    imageSource: `images/operator.png`,
+    text: "Перевод на новый\n" + "тариф в течение\n" + "8 дней",
+  },
+  {
+    id: 5,
+    imageSource: `/images/cost.png`,
+    text:
+      "Вы экономите до 30%\n" + "благодаря подключению\n" + "к новому тарифу",
+  },
+];
+
+export const costReductionCard: CardProps[] = [
+  {
+    id: 1,
+    imageSource: `/images/special.png`,
+    text: "Доступ к\nспециальным\nтарифам",
+  },
+  {
+    id: 2,
+    imageSource: `/images/number.png`,
+    text: "Не нужно менять\nНомер",
+  },
+  {
+    id: 3,
+    imageSource: `/images/cost.png`,
+    text: "Среднее снижение\nзатрат 30%",
+  },
+  {
+    id: 4,
+    imageSource: `/images/operator.png`,
+    text: "Смена оператора и\nтарифа в течении 8\nдней",
+  },
+];
+
 export const navigationCard: NavigationProps[] = [
   {
     id: 1,
     paragraph: "telephony",
-    imageSource: `${import.meta.env.BASE_URL}images/w1.jpg`,
+    imageSource: `src/assets/telephony.svg`,
     text: "СОКРАТИМ ЗАТРАТЫ\nНА СОТОВУЮ СВЯЗЬ",
   },
   {
     id: 2,
     paragraph: "software",
-    imageSource: `${import.meta.env.BASE_URL}images/w2.jpg`,
+    imageSource: `src/assets/software.svg`,
     text: "ПОДБЕРЕМ И ОПТИМИЗИРУЕМ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ",
   },
   {
     id: 3,
     paragraph: "hardware",
-    imageSource: `${import.meta.env.BASE_URL}images/w3.jpg`,
+    imageSource: `src/assets/hardware.svg`,
     text: "ПОДБЕРЕМ И УСТАНОВИМ\nАППАРАТНОЕ ОБЕСПЕЧЕНИЕ",
   },
 ];

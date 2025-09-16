@@ -14,7 +14,7 @@ const Information = ({ text, image }: InformationProps) => {
       $justifyContent={"center"}
       style={{ flexDirection: "column" }}
     >
-      <Title level={1}> {text}</Title>
+      <Title level={1} style={{whiteSpace: "pre-line", textAlign: "center"}}> {text}</Title>
       <ContentContainer $justifyContent={"center"} style={{ marginTop: "20px" }}>
         <img
           src={image}
